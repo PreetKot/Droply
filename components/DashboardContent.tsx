@@ -45,18 +45,25 @@ export default function DashboardContent({
   return (
     <>
       <div className="mb-8">
-        <h2 className="text-4xl font-bold text-lime-400">
-          Hi,{" "}
-          <span className="text-lime-500">
-            {userName?.length > 10
-              ? `${userName?.substring(0, 10)}...`
-              : userName?.split(" ")[0] || "there"}
-          </span>
-          !
-        </h2>
-        <p className="text-lime-200 mt-2 text-lg">
-          Your images are waiting for you.
-        </p>
+        <div className="flex items-center gap-4 mb-6">
+          <div className="p-3 bg-lime-500/10 rounded-xl">
+            <FileText className="h-8 w-8 text-lime-400" />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-lime-400">
+              Welcome back,{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-lime-500">
+                {userName?.length > 10
+                  ? `${userName?.substring(0, 10)}...`
+                  : userName?.split(" ")[0] || "User"}
+              </span>
+              ! 👋
+            </h2>
+            <p className="text-lime-300 mt-2">
+              Manage your images and folders with ease
+            </p>
+          </div>
+        </div>
       </div>
 
       <Tabs
