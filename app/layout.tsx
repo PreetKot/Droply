@@ -11,8 +11,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Droply - Secure Cloud Storage for Images",
-  description: "Store, organize, and manage your images with Droply. Fast uploads, military-grade security, and smart organization. Experience next-generation cloud storage.",
-  keywords: ["cloud storage", "image storage", "file upload", "secure storage", "photo management"],
+  description:
+    "Store, organize, and manage your images with Droply. Fast uploads, military-grade security, and smart organization. Experience next-generation cloud storage.",
+  keywords: [
+    "cloud storage",
+    "image storage",
+    "file upload",
+    "secure storage",
+    "photo management",
+  ],
   authors: [{ name: "PreetKot", url: "https://github.com/PreetKot" }],
   openGraph: {
     title: "Droply - Secure Cloud Storage for Images",

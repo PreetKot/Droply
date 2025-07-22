@@ -43,14 +43,14 @@ export async function POST(request: NextRequest) {
           and(
             eq(files.id, parentId),
             eq(files.userId, userId),
-            eq(files.isFolder, true)
-          )
+            eq(files.isFolder, true),
+          ),
         );
 
       if (!parentFolder) {
         return NextResponse.json(
           { error: "Parent folder not found" },
-          { status: 404 }
+          { status: 404 },
         );
       }
     }
@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
     if (!file.type.startsWith("image/") && file.type !== "application/pdf") {
       return NextResponse.json(
         { error: "Only image files are supported" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
     console.error("Error uploading file:", error);
     return NextResponse.json(
       { error: "Failed to upload file" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

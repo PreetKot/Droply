@@ -3,14 +3,17 @@
 ## Step-by-Step Vercel Environment Setup
 
 ### 1. 📍 Go to Vercel Dashboard
+
 - Visit: https://vercel.com/dashboard
 - Select your Droply project
 
 ### 2. 🔧 Navigate to Environment Variables
+
 - Click on your project
 - Go to: **Settings** → **Environment Variables**
 
 ### 3. ➕ Add Each Variable ONE BY ONE
+
 **CRITICAL**: Add these EXACT variables (copy-paste each line):
 
 ```
@@ -56,23 +59,28 @@ Environment: Production, Preview, Development
 ```
 
 ### 4. 🔄 Redeploy
+
 After adding ALL variables:
+
 - Go to **Deployments** tab
 - Click **"Redeploy"** on the latest deployment
 - OR trigger a new deployment by pushing a small change
 
 ### 5. ✅ Verify Setup
+
 Check that ALL variables are listed in your Environment Variables section.
 
 ## 🔍 Common Mistakes to Avoid:
 
 ❌ **Don't do this:**
+
 - Copying variable names with extra spaces
 - Missing the `NEXT_PUBLIC_` prefix
 - Adding quotes around values
 - Forgetting to select all environments
 
 ✅ **Do this:**
+
 - Copy-paste exactly as shown above
 - Select Production, Preview, AND Development for each variable
 - Double-check each variable name spelling
@@ -81,10 +89,12 @@ Check that ALL variables are listed in your Environment Variables section.
 ## 🚨 If Error Persists:
 
 1. **Clear Vercel Cache:**
+
    - Go to Settings → Functions
    - Clear cache if available
 
 2. **Check Clerk Dashboard:**
+
    - Verify your API keys are still active
    - Make sure your domain is in allowed origins
 

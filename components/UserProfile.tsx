@@ -34,7 +34,11 @@ export default function UserProfile() {
         <Divider className="bg-lime-700" />
         <CardBody className="text-center py-10">
           <div className="mb-6">
-            <Avatar name="Guest" size="lg" className="mx-auto mb-4 bg-lime-900 text-lime-400" />
+            <Avatar
+              name="Guest"
+              size="lg"
+              className="mx-auto mb-4 bg-lime-900 text-lime-400"
+            />
             <p className="text-lg font-medium text-lime-400">Not Signed In</p>
             <p className="text-lime-500 mt-2">
               Please sign in to access your profile
@@ -133,7 +137,9 @@ export default function UserProfile() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-lime-400" />
-              <span className="font-medium text-lime-300">Email Verification</span>
+              <span className="font-medium text-lime-300">
+                Email Verification
+              </span>
             </div>
             <Badge
               color={

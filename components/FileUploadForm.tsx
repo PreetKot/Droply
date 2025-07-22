@@ -109,7 +109,7 @@ export default function FileUploadForm({
         onUploadProgress: (progressEvent) => {
           if (progressEvent.total) {
             const percentCompleted = Math.round(
-              (progressEvent.loaded * 100) / progressEvent.total
+              (progressEvent.loaded * 100) / progressEvent.total,
             );
             setProgress(percentCompleted);
           }
@@ -310,7 +310,9 @@ export default function FileUploadForm({
             <Button
               color="primary"
               startContent={<Upload className="h-4 w-4 text-lime-400" />}
-              endContent={!uploading && <ArrowRight className="h-4 w-4 text-lime-400" />}
+              endContent={
+                !uploading && <ArrowRight className="h-4 w-4 text-lime-400" />
+              }
               onClick={handleUpload}
               isLoading={uploading}
               className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold"
@@ -359,7 +361,6 @@ export default function FileUploadForm({
                 placeholder="My Images"
                 value={folderName}
                 onChange={(e) => setFolderName(e.target.value)}
-                autoFocus
                 className="text-lime-400"
               />
             </div>
@@ -378,7 +379,11 @@ export default function FileUploadForm({
               onClick={handleCreateFolder}
               isLoading={creatingFolder}
               isDisabled={!folderName.trim()}
-              endContent={!creatingFolder && <ArrowRight className="h-4 w-4 text-lime-400" />}
+              endContent={
+                !creatingFolder && (
+                  <ArrowRight className="h-4 w-4 text-lime-400" />
+                )
+              }
               className="bg-lime-500 hover:bg-lime-400 text-black font-bold"
             >
               Create

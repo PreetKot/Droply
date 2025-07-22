@@ -47,16 +47,17 @@ export default function Home() {
                     Unleash. Secure. Fast.
                   </p>
                   <p className="text-lg text-lime-300/80 max-w-2xl">
-                    Experience next-generation cloud storage with blazing-fast uploads, 
-                    military-grade security, and seamless organization for all your precious memories.
+                    Experience next-generation cloud storage with blazing-fast
+                    uploads, military-grade security, and seamless organization
+                    for all your precious memories.
                   </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start">
                   <SignedOut>
                     <Link href="/sign-up">
-                      <Button 
-                        size="lg" 
+                      <Button
+                        size="lg"
                         className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                         endContent={<ArrowRight className="h-5 w-5" />}
                       >
@@ -64,9 +65,9 @@ export default function Home() {
                       </Button>
                     </Link>
                     <Link href="/sign-in">
-                      <Button 
-                        size="lg" 
-                        variant="bordered" 
+                      <Button
+                        size="lg"
+                        variant="bordered"
                         className="border-2 border-lime-400 text-lime-400 hover:bg-lime-900/30 px-8 py-3 text-lg transition-all duration-300"
                       >
                         Sign In
@@ -76,8 +77,8 @@ export default function Home() {
 
                   <SignedIn>
                     <Link href="/dashboard">
-                      <Button 
-                        size="lg" 
+                      <Button
+                        size="lg"
                         className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                         endContent={<ArrowRight className="h-5 w-5" />}
                       >
@@ -90,15 +91,21 @@ export default function Home() {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-6 pt-8 border-t border-lime-500/20">
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-lime-400">99.9%</div>
+                    <div className="text-2xl md:text-3xl font-bold text-lime-400">
+                      99.9%
+                    </div>
                     <div className="text-sm text-lime-300">Uptime</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-lime-400">5MB</div>
+                    <div className="text-2xl md:text-3xl font-bold text-lime-400">
+                      5MB
+                    </div>
                     <div className="text-sm text-lime-300">Max File Size</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-lime-400">∞</div>
+                    <div className="text-2xl md:text-3xl font-bold text-lime-400">
+                      ∞
+                    </div>
                     <div className="text-sm text-lime-300">Storage</div>
                   </div>
                 </div>
@@ -126,10 +133,11 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-lime-400">
-                Everything you need, nothing you don't
+                Everything you need, nothing you don&apos;t
               </h2>
               <p className="text-lg text-lime-300/80 max-w-2xl mx-auto">
-                Built for creators, photographers, and anyone who values their digital memories
+                Built for creators, photographers, and anyone who values their
+                digital memories
               </p>
             </div>
 
@@ -144,7 +152,8 @@ export default function Home() {
                     Lightning Fast Uploads
                   </h3>
                   <p className="text-lime-200/80">
-                    Drag, drop, and watch your images upload at blazing speeds with our optimized infrastructure.
+                    Drag, drop, and watch your images upload at blazing speeds
+                    with our optimized infrastructure.
                   </p>
                 </CardBody>
               </Card>
@@ -159,7 +168,8 @@ export default function Home() {
                     Military-Grade Security
                   </h3>
                   <p className="text-lime-200/80">
-                    Your memories are protected with enterprise-level encryption and privacy controls.
+                    Your memories are protected with enterprise-level encryption
+                    and privacy controls.
                   </p>
                 </CardBody>
               </Card>
@@ -174,7 +184,8 @@ export default function Home() {
                     Smart Organization
                   </h3>
                   <p className="text-lime-200/80">
-                    Intelligent folder management and tagging system to keep your collection organized.
+                    Intelligent folder management and tagging system to keep
+                    your collection organized.
                   </p>
                 </CardBody>
               </Card>
@@ -189,7 +200,8 @@ export default function Home() {
                     Mobile Optimized
                   </h3>
                   <p className="text-lime-200/80">
-                    Access your images anywhere, anytime with our responsive design that works perfectly on all devices.
+                    Access your images anywhere, anytime with our responsive
+                    design that works perfectly on all devices.
                   </p>
                 </CardBody>
               </Card>
@@ -204,7 +216,8 @@ export default function Home() {
                     Favorites & Collections
                   </h3>
                   <p className="text-lime-200/80">
-                    Star your best shots and create custom collections for easy browsing and sharing.
+                    Star your best shots and create custom collections for easy
+                    browsing and sharing.
                   </p>
                 </CardBody>
               </Card>
@@ -219,7 +232,8 @@ export default function Home() {
                     Private by Design
                   </h3>
                   <p className="text-lime-200/80">
-                    Your images are private by default. You control who sees what, when, and how.
+                    Your images are private by default. You control who sees
+                    what, when, and how.
                   </p>
                 </CardBody>
               </Card>
@@ -235,14 +249,17 @@ export default function Home() {
                 Trusted by creators worldwide
               </h2>
               <p className="text-lg text-lime-300/80">
-                Join thousands of users who trust Droply with their precious memories
+                Join thousands of users who trust Droply with their precious
+                memories
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <Users className="h-12 w-12 mx-auto mb-4 text-lime-400" />
-                <div className="text-3xl font-bold text-lime-400 mb-2">10,000+</div>
+                <div className="text-3xl font-bold text-lime-400 mb-2">
+                  10,000+
+                </div>
                 <div className="text-lime-300">Active Users</div>
               </div>
               <div className="text-center">
@@ -272,8 +289,8 @@ export default function Home() {
               <SignedOut>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/sign-up">
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-12 py-4 text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                       endContent={<ArrowRight className="h-6 w-6" />}
                     >
@@ -281,9 +298,9 @@ export default function Home() {
                     </Button>
                   </Link>
                   <Link href="/sign-in">
-                    <Button 
-                      size="lg" 
-                      variant="bordered" 
+                    <Button
+                      size="lg"
+                      variant="bordered"
                       className="border-2 border-lime-400 text-lime-400 hover:bg-lime-900/30 px-12 py-4 text-xl transition-all duration-300"
                     >
                       Sign In
@@ -293,8 +310,8 @@ export default function Home() {
               </SignedOut>
               <SignedIn>
                 <Link href="/dashboard">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-12 py-4 text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     endContent={<ArrowRight className="h-6 w-6" />}
                   >
@@ -317,9 +334,9 @@ export default function Home() {
             </div>
             <div className="text-lime-300 text-sm">
               © 2025 Droply. Built with ❤️ by{" "}
-              <a 
-                href="https://github.com/PreetKot" 
-                target="_blank" 
+              <a
+                href="https://github.com/PreetKot"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-lime-400 hover:text-lime-300 transition-colors"
               >

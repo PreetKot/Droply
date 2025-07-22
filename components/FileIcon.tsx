@@ -9,8 +9,7 @@ interface FileIconProps {
 }
 
 export default function FileIcon({ file }: FileIconProps) {
-  if (file.isFolder)
-    return <Folder className="h-5 w-5 text-lime-400" />;
+  if (file.isFolder) return <Folder className="h-5 w-5 text-lime-400" />;
 
   const fileType = file.type.split("/")[0];
   switch (fileType) {

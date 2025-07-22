@@ -108,8 +108,8 @@ export default function FileList({
       // Update local state
       setFiles(
         files.map((file) =>
-          file.id === fileId ? { ...file, isStarred: !file.isStarred } : file
-        )
+          file.id === fileId ? { ...file, isStarred: !file.isStarred } : file,
+        ),
       );
 
       // Show toast
@@ -139,8 +139,8 @@ export default function FileList({
       // Update local state
       setFiles(
         files.map((file) =>
-          file.id === fileId ? { ...file, isTrash: !file.isTrash } : file
-        )
+          file.id === fileId ? { ...file, isTrash: !file.isTrash } : file,
+        ),
       );
 
       // Show toast

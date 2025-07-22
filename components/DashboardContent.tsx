@@ -92,7 +92,9 @@ export default function DashboardContent({
               <Card className="border border-lime-500 bg-black/40 shadow-lg hover:shadow-2xl transition-shadow">
                 <CardHeader className="flex gap-3">
                   <FileUp className="h-5 w-5 text-lime-400" />
-                  <h2 className="text-xl font-semibold text-lime-300">Upload</h2>
+                  <h2 className="text-xl font-semibold text-lime-300">
+                    Upload
+                  </h2>
                 </CardHeader>
                 <CardBody>
                   <FileUploadForm
@@ -108,7 +110,9 @@ export default function DashboardContent({
               <Card className="border border-lime-500 bg-black/40 shadow-lg hover:shadow-2xl transition-shadow">
                 <CardHeader className="flex gap-3">
                   <FileText className="h-5 w-5 text-lime-400" />
-                  <h2 className="text-xl font-semibold text-lime-300">Your Files</h2>
+                  <h2 className="text-xl font-semibold text-lime-300">
+                    Your Files
+                  </h2>
                 </CardHeader>
                 <CardBody>
                   <FileList

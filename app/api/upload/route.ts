@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     if (!imagekit || !imagekit.url) {
       return NextResponse.json(
         { error: "Invalid file upload data" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     console.error("Error saving file:", error);
     return NextResponse.json(
       { error: "Failed to save file information" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
