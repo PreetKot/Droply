@@ -44,7 +44,7 @@ droply-main/
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 - PostgreSQL database (Neon recommended)
 - Clerk account for authentication
@@ -53,25 +53,28 @@ droply-main/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/PreetKot/Droply.git
    cd droply-main
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
-   
+
    Copy the environment variables from `.env.production.template` and create a `.env` file:
-   
+
    ```bash
    cp .env.production.template .env
    ```
 
    Fill in your actual values:
+
    ```env
    # Clerk Authentication
    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
@@ -90,11 +93,13 @@ droply-main/
    ```
 
 4. **Set up the database**
+
    ```bash
    npm run db:push
    ```
 
 5. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -138,13 +143,14 @@ droply-main/
 ### Vercel Deployment (Recommended)
 
 1. **Connect your repository to Vercel**
+
    - Go to [vercel.com](https://vercel.com)
    - Import your GitHub repository
 
 2. **Configure Environment Variables in Vercel**
-   
+
    ⚠️ **CRITICAL**: You must add ALL these environment variables in your Vercel project settings:
-   
+
    Go to: **Project Settings** → **Environment Variables** → Add each variable:
 
    ```env
@@ -173,6 +179,7 @@ droply-main/
    ```
 
 3. **Update Clerk Settings**
+
    - Go to [Clerk Dashboard](https://dashboard.clerk.com)
    - Add your Vercel domain to **Allowed Origins**
    - Verify your API keys are active
@@ -187,20 +194,24 @@ droply-main/
 ### Troubleshooting Deployment Issues
 
 **Error: "Missing secretKey"**
+
 - Ensure `CLERK_SECRET_KEY` is set in Vercel environment variables
 - Check that the key starts with `sk_test_` or `sk_live_`
 
 **Error: "MIDDLEWARE_INVOCATION_FAILED"**
+
 - Verify all Clerk environment variables are properly set
 - Make sure your domain is added to Clerk's allowed origins
 
 **File Upload Issues**
+
 - Check ImageKit environment variables are set
 - Verify ImageKit URL endpoint is correct
 
 ### Environment Variables Verification
 
 Run this script locally to verify your environment setup:
+
 ```bash
 ./verify-env.sh
 ```
@@ -229,6 +240,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 If you have any questions or need help, feel free to:
+
 - Open an issue on GitHub
 - Contact the maintainer: [PreetKot](https://github.com/PreetKot)
 

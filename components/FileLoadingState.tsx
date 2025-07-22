@@ -10,7 +10,7 @@ export default function FileLoadingState() {
         <Spinner size="lg" color="success" className="relative z-10" />
       </div>
       <p className="text-lime-400 text-lg font-medium">Loading your files...</p>
-      <p className="text-lime-300/60 text-sm mt-2">This won't take long</p>
+      <p className="text-lime-300/60 text-sm mt-2">This won&apos;t take long</p>
     </div>
   );
 }

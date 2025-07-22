@@ -29,7 +29,7 @@ export default function SignUpForm() {
   const [verifying, setVerifying] = useState(false);
   const [verificationCode, setVerificationCode] = useState("");
   const [verificationError, setVerificationError] = useState<string | null>(
-    null
+    null,
   );
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -65,7 +65,7 @@ export default function SignUpForm() {
       console.error("Sign-up error:", error);
       setAuthError(
         error.errors?.[0]?.message ||
-          "An error occurred during sign-up. Please try again."
+          "An error occurred during sign-up. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -73,7 +73,7 @@ export default function SignUpForm() {
   };
 
   const handleVerificationSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
+    e: React.FormEvent<HTMLFormElement>,
   ) => {
     e.preventDefault();
     if (!isLoaded || !signUp) return;
@@ -92,14 +92,14 @@ export default function SignUpForm() {
       } else {
         console.error("Verification incomplete:", result);
         setVerificationError(
-          "Verification could not be completed. Please try again."
+          "Verification could not be completed. Please try again.",
         );
       }
     } catch (error: any) {
       console.error("Verification error:", error);
       setVerificationError(
         error.errors?.[0]?.message ||
-          "An error occurred during verification. Please try again."
+          "An error occurred during verification. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -114,7 +114,7 @@ export default function SignUpForm() {
             Verify Your Email
           </h1>
           <p className="text-lime-300 text-center">
-            We've sent a verification code to your email
+            We&apos;ve sent a verification code to your email
           </p>
         </CardHeader>
 
@@ -143,7 +143,6 @@ export default function SignUpForm() {
                 value={verificationCode}
                 onChange={(e) => setVerificationCode(e.target.value)}
                 className="w-full"
-                autoFocus
               />
             </div>
 
@@ -159,7 +158,7 @@ export default function SignUpForm() {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-lime-300">
-              Didn't receive a code?{" "}
+              Didn&apos;t receive a code?{" "}
               <button
                 onClick={async () => {
                   if (signUp) {

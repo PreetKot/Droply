@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     if (!name || typeof name !== "string" || name.trim() === "") {
       return NextResponse.json(
         { error: "Folder name is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -36,14 +36,14 @@ export async function POST(request: NextRequest) {
           and(
             eq(files.id, parentId),
             eq(files.userId, userId),
-            eq(files.isFolder, true)
-          )
+            eq(files.isFolder, true),
+          ),
         );
 
       if (!parentFolder) {
         return NextResponse.json(
           { error: "Parent folder not found" },
-          { status: 404 }
+          { status: 404 },
         );
       }
     }
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
     console.error("Error creating folder:", error);
     return NextResponse.json(
       { error: "Failed to create folder" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -139,7 +139,9 @@ export default function Navbar({ user }: NavbarProps) {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-10">
             <CloudUpload className="h-6 w-6 text-lime-500" />
-            <h1 className="text-xl font-bold text-lime-400 drop-shadow">Droply</h1>
+            <h1 className="text-xl font-bold text-lime-400 drop-shadow">
+              Droply
+            </h1>
           </Link>
 
           {/* Desktop Navigation */}
@@ -147,12 +149,18 @@ export default function Navbar({ user }: NavbarProps) {
             {/* Show these buttons when user is signed out */}
             <SignedOut>
               <Link href="/sign-in">
-                <Button variant="flat" className="border border-lime-400 text-lime-400 hover:bg-lime-900">
+                <Button
+                  variant="flat"
+                  className="border border-lime-400 text-lime-400 hover:bg-lime-900"
+                >
                   Sign In
                 </Button>
               </Link>
               <Link href="/sign-up">
-                <Button variant="solid" className="bg-lime-500 hover:bg-lime-400 text-black font-bold">
+                <Button
+                  variant="solid"
+                  className="bg-lime-500 hover:bg-lime-400 text-black font-bold"
+                >
                   Sign Up
                 </Button>
               </Link>
@@ -163,7 +171,10 @@ export default function Navbar({ user }: NavbarProps) {
               <div className="flex items-center gap-4">
                 {!isOnDashboard && (
                   <Link href="/dashboard">
-                    <Button variant="flat" className="border border-lime-400 text-lime-400 hover:bg-lime-900">
+                    <Button
+                      variant="flat"
+                      className="border border-lime-400 text-lime-400 hover:bg-lime-900"
+                    >
                       Dashboard
                     </Button>
                   </Link>
@@ -173,7 +184,9 @@ export default function Navbar({ user }: NavbarProps) {
                     <Button
                       variant="flat"
                       className="p-0 bg-transparent min-w-0 text-lime-300"
-                      endContent={<ChevronDown className="h-4 w-4 ml-2 text-lime-400" />}
+                      endContent={
+                        <ChevronDown className="h-4 w-4 ml-2 text-lime-400" />
+                      }
                     >
                       <div className="flex items-center gap-2">
                         <Avatar
@@ -267,7 +280,10 @@ export default function Navbar({ user }: NavbarProps) {
                   className="w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Button variant="flat" className="border border-lime-400 text-lime-400 hover:bg-lime-900 w-full">
+                  <Button
+                    variant="flat"
+                    className="border border-lime-400 text-lime-400 hover:bg-lime-900 w-full"
+                  >
                     Sign In
                   </Button>
                 </Link>
@@ -276,7 +292,10 @@ export default function Navbar({ user }: NavbarProps) {
                   className="w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Button variant="solid" className="bg-lime-500 hover:bg-lime-400 text-black font-bold w-full">
+                  <Button
+                    variant="solid"
+                    className="bg-lime-500 hover:bg-lime-400 text-black font-bold w-full"
+                  >
                     Sign Up
                   </Button>
                 </Link>
@@ -295,10 +314,10 @@ export default function Navbar({ user }: NavbarProps) {
                     fallback={<User className="h-5 w-5 text-lime-400" />}
                   />
                   <div>
-                    <p className="font-medium text-lime-300">{userDetails.displayName}</p>
-                    <p className="text-sm text-lime-500">
-                      {userDetails.email}
+                    <p className="font-medium text-lime-300">
+                      {userDetails.displayName}
                     </p>
+                    <p className="text-sm text-lime-500">{userDetails.email}</p>
                   </div>
                 </div>
 

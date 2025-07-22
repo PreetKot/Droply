@@ -68,7 +68,7 @@ export const Badge = ({
         "inline-flex items-center justify-center font-medium",
         colorStyles[color][variant],
         sizeStyles[size],
-        className
+        className,
       )}
       {...props}
     >
