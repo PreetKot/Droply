@@ -135,34 +135,74 @@ droply-main/
 
 ## 🚀 Deployment
 
-### Vercel Deployment
+### Vercel Deployment (Recommended)
 
 1. **Connect your repository to Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Import your GitHub repository
 
-2. **Set environment variables in Vercel**
-   - Go to your project settings in Vercel
-   - Add all environment variables from your `.env` file
-   - Update `NEXT_PUBLIC_APP_URL` to your Vercel domain
+2. **Configure Environment Variables in Vercel**
+   
+   ⚠️ **CRITICAL**: You must add ALL these environment variables in your Vercel project settings:
+   
+   Go to: **Project Settings** → **Environment Variables** → Add each variable:
 
-3. **Deploy**
+   ```env
+   # Clerk Authentication (REQUIRED)
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZmFuY3ktbW9ua2Zpc2gtNzkuY2xlcmsuYWNjb3VudHMuZGV2JA
+   CLERK_SECRET_KEY=sk_test_pMl8drNHyZzDp7HbeqQt8n58qmRb7Dtr08SDLiShWN
+
+   # ImageKit (REQUIRED)
+   NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY=public_6up0qJdyj2C4+s9wK9qDjTxpM4c=
+   IMAGEKIT_PRIVATE_KEY=private_F4KAuv2q0gjOQlScIPM387uu9NE=
+   NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT=https://ik.imagekit.io/preetkotmire
+
+   # Clerk URLs
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+   NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
+   NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+
+   # Database (REQUIRED)
+   DATABASE_URL=postgresql://neondb_owner:npg_yfEqXdmK83lD@ep-ancient-voice-a8yp8yv2-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
+
+   # App URL (UPDATE with your Vercel URL)
+   NEXT_PUBLIC_APP_URL=https://your-project-name.vercel.app
+   ```
+
+3. **Update Clerk Settings**
+   - Go to [Clerk Dashboard](https://dashboard.clerk.com)
+   - Add your Vercel domain to **Allowed Origins**
+   - Verify your API keys are active
+
+4. **Deploy**
    ```bash
    git add .
-   git commit -m "Deploy to Vercel"
+   git commit -m "Add environment variables and deploy fixes"
    git push
    ```
 
-### Environment Variables for Production
+### Troubleshooting Deployment Issues
 
-Make sure to set these in your Vercel dashboard:
+**Error: "Missing secretKey"**
+- Ensure `CLERK_SECRET_KEY` is set in Vercel environment variables
+- Check that the key starts with `sk_test_` or `sk_live_`
 
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-CLERK_SECRET_KEY
-NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY
-IMAGEKIT_PRIVATE_KEY
-NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT
-DATABASE_URL
-NEXT_PUBLIC_APP_URL
+**Error: "MIDDLEWARE_INVOCATION_FAILED"**
+- Verify all Clerk environment variables are properly set
+- Make sure your domain is added to Clerk's allowed origins
+
+**File Upload Issues**
+- Check ImageKit environment variables are set
+- Verify ImageKit URL endpoint is correct
+
+### Environment Variables Verification
+
+Run this script locally to verify your environment setup:
+```bash
+./verify-env.sh
 ```
 
 ## 🤝 Contributing
