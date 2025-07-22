@@ -25,7 +25,7 @@ NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
 NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
 
 # ========================================
-# APPLICATION URL (UPDATE THIS!)
+# APPLICATION URL (UPDATE WITH YOUR ACTUAL VERCEL URL!)
 # ========================================
 NEXT_PUBLIC_APP_URL=https://your-vercel-app-name.vercel.app
 
