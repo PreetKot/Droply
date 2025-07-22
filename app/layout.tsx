@@ -10,8 +10,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Droply",
-  description: "Secure cloud storage for your images, powered by ImageKit",
+  title: "Droply - Secure Cloud Storage for Images",
+  description: "Store, organize, and manage your images with Droply. Fast uploads, military-grade security, and smart organization. Experience next-generation cloud storage.",
+  keywords: ["cloud storage", "image storage", "file upload", "secure storage", "photo management"],
+  authors: [{ name: "PreetKot", url: "https://github.com/PreetKot" }],
+  openGraph: {
+    title: "Droply - Secure Cloud Storage for Images",
+    description: "Store your images with energy. Unleash. Secure. Fast.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Droply - Secure Cloud Storage for Images",
+    description: "Store your images with energy. Unleash. Secure. Fast.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 // ...existing code...

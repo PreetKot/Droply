@@ -188,56 +188,68 @@ export default function FileUploadForm({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {/* Action buttons */}
-      <div className="flex gap-2 mb-2">
+      <div className="flex gap-3 mb-4">
         <Button
           color="primary"
           variant="flat"
-          startContent={<FolderPlus className="h-4 w-4 text-lime-400" />}
+          startContent={<FolderPlus className="h-4 w-4" />}
           onClick={() => setFolderModalOpen(true)}
-          className="flex-1 border border-lime-400 text-lime-400 hover:bg-lime-900"
+          className="flex-1 bg-lime-500/10 border border-lime-400/30 text-lime-400 hover:bg-lime-500/20 transition-all duration-300"
         >
           New Folder
         </Button>
         <Button
           color="primary"
           variant="flat"
-          startContent={<FileUp className="h-4 w-4 text-lime-400" />}
+          startContent={<FileUp className="h-4 w-4" />}
           onClick={() => fileInputRef.current?.click()}
-          className="flex-1 border border-lime-400 text-lime-400 hover:bg-lime-900"
+          className="flex-1 bg-lime-500/10 border border-lime-400/30 text-lime-400 hover:bg-lime-500/20 transition-all duration-300"
         >
           Add Image
         </Button>
       </div>
 
-      {/* File drop area */}
+      {/* Enhanced file drop area */}
       <div
         onDrop={handleDrop}
         onDragOver={handleDragOver}
-        className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
+        className={`border-2 border-dashed rounded-xl p-8 text-center transition-all duration-300 ${
           error
-            ? "border-red-500/30 bg-red-500/5"
+            ? "border-red-500/50 bg-red-500/5"
             : file
-              ? "border-lime-400/30 bg-lime-400/5"
-              : "border-lime-400 hover:border-lime-500"
+              ? "border-lime-400/50 bg-lime-400/10"
+              : "border-lime-400/30 hover:border-lime-400/60 bg-lime-400/5 hover:bg-lime-400/10"
         }`}
       >
         {!file ? (
-          <div className="space-y-3">
-            <FileUp className="h-12 w-12 mx-auto text-lime-400/70" />
+          <div className="space-y-4">
+            <div className="relative">
+              <FileUp className="h-16 w-16 mx-auto text-lime-400/70 mb-4" />
+              <div className="absolute -top-2 -right-2 h-6 w-6 bg-lime-500/20 rounded-full flex items-center justify-center">
+                <span className="text-lime-400 text-xs">+</span>
+              </div>
+            </div>
             <div>
-              <p className="text-lime-300">
-                Drag and drop your image here, or{" "}
+              <p className="text-lime-300 text-lg font-medium mb-2">
+                Drop your image here
+              </p>
+              <p className="text-lime-400/80">
+                or{" "}
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="text-lime-400 cursor-pointer font-medium inline bg-transparent border-0 p-0 m-0"
+                  className="text-lime-400 hover:text-lime-300 font-medium underline underline-offset-2 transition-colors"
                 >
-                  browse
+                  browse files
                 </button>
               </p>
-              <p className="text-xs text-lime-500 mt-1">Images up to 5MB</p>
+              <p className="text-sm text-lime-500 mt-3 flex items-center justify-center gap-2">
+                <span className="w-2 h-2 bg-lime-500 rounded-full"></span>
+                Images up to 5MB
+                <span className="w-2 h-2 bg-lime-500 rounded-full"></span>
+              </p>
             </div>
             <Input
               type="file"

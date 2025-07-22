@@ -420,7 +420,7 @@ export default function FileList({
       ) : (
         <Card
           shadow="sm"
-          className="border border-lime-400 bg-black/40 shadow-lg hover:shadow-2xl transition-shadow overflow-hidden"
+          className="border border-lime-400/30 bg-black/40 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
         >
           <div className="overflow-x-auto">
             <Table
